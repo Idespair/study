@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./build/styles/main.css">
+</head>
+<header>
+    <input type="checkbox" id="dark" onclick="myFunction()">
+    <label for="dark" class="label"></label>
+</header>
+<body>
+    <div class="paragraph">
+    <p>Aceitas ser meu amor?</p>
+    </div>
+    <div class="container">
+        <button id="pos" class="btn btn-positive">Sim</button>
+        <button id="neg" class="btn btn-negative">Não</button>
+    </div>
+    <dialog>
+    <img class="image" id="gatito" src="./src/images/gatito.jpg" alt="gatito">
+    </dialog>
+</body>
+<script>
+    
+const button = document.getElementById("neg");
+const accept = document.getElementById("pos");
+const modal = document.querySelector("dialog");
+const gatito = document.getElementById("gatito");
+
+accept.onclick = function(){
+    modal.showModal();
+    gatito.classList.toggle("gatito");
+}
+
+function myFunction(){
+    let darkMode = document.body;
+    darkMode.classList.toggle("dark");
+}
+
+button.addEventListener("mouseover", function () {
+    button.style.left = `${Math.ceil(Math.random() * 90)}%`;
+    button.style.top = `${Math.ceil(Math.random() * 90)}%`;
+});
+
+</script>
+</html>

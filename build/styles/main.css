@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  padding-bottom: 24px;
+}
+body {
+  background-color: white;
+}
+.paragraph {
+  position: relative;
+  margin: 0 auto;
+  max-width: 960px;
+  width: 60%;
+  display: flex;
+  margin-top: 100px;
+}
+p {
+  margin-left: 297px;
+  font-size: 32px;
+}
+.container {
+  max-width: 960px;
+  width: 20%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  height: 20%;
+  padding: 50px;
+  color: white;
+  cursor: pointer;
+}
+.btn-positive {
+  background-color: green;
+  float: left;
+}
+.btn-positive:hover {
+  scale: 1.1;
+}
+.btn-negative {
+  background-color: red;
+  float: right;
+  position: absolute;
+  margin: 0 150px;
+}
+.label {
+  float: right;
+  background-color: #e2cccc;
+  width: 100px;
+  height: 60px;
+  border-radius: 100px;
+  cursor: pointer;
+  position: relative;
+}
+.label::before {
+  position: absolute;
+  content: '';
+  background-color: gray;
+  width: 50px;
+  height: 52px;
+  border-radius: 200px;
+  margin: 5px;
+  transition: 0.2s;
+}
+input:checked + .label {
+  background-color: #300f30;
+}
+input:checked + .label::before {
+  transform: translateX(40px);
+}
+input {
+  display: none;
+}
+.dark {
+  background-color: #100810;
+  color: #2c9fb0;
+}
+img {
+  display: none;
+}
+.gatito {
+  display: inline;
+  height: 800px;
+  width: 1200px;
+}
